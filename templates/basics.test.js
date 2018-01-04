@@ -30,8 +30,10 @@ describe('a template string, is wrapped in ` (backticks) instead of \' or "', fu
     });
 
     it('inside "${...}" can also be a function call', function() {
-      function getDomain(){
-        return document.domain;
+      function getDomain() {
+        // Note(ericat): does not work in Node.
+        // return document.domain;
+        return 'tddbin.com';
       }
 
       var evaluated = `${ getDomain() }`;

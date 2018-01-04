@@ -66,13 +66,4 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
         .catch(() => done());
     });
   });
-
-  describe('test library (mocha here) support for promises', function() {
-    it('just returning the promise makes the test library check that the promise resolves', function() {
-      let promise = new Promise((reject, resolve) => {
-      });
-
-      return promise;
-    });
-  });
 });
